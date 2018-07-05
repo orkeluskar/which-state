@@ -6,12 +6,7 @@ A server which finds if a specified point, if any, is in provides list of geo bo
 
 ## Getting Started
 
-To get started quickly, assuming you have node & git installed on your machine
-```bash
-git clone https://github.com/orkeluskar/which-state.git && cd which-state && chmod +x qs.sh && ./qs.sh
-```
-
-**OR, follow these steps**
+Assuming you have [node](https://nodejs.org/en/) & git installed on your machine
 
 1. Clone the repo
    ```
