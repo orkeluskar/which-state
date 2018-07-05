@@ -1,4 +1,5 @@
-#/bin/bash
-git clone https://github.com/orkeluskar/which-state.git
+#!/bin/bash
+
+cd which-state
 npm install
 npm run start

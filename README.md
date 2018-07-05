@@ -8,7 +8,7 @@ A server which finds if a specified point, if any, is in provides list of geo bo
 
 To get started quickly, assuming you have node & git installed on your machine
 ```bash
-chmod +x quickstart.sh && ./quickstart.sh
+git clone https://github.com/orkeluskar/which-state.git && chmod +x quickstart.sh && ./quickstart.sh
 ```
 
 **OR, follow these steps**
@@ -16,6 +16,10 @@ chmod +x quickstart.sh && ./quickstart.sh
 1. Clone the repo
    ```
    git clone https://github.com/orkeluskar/which-state.git
+   ```
+2. Change directory
+   ```
+   cd which-state
    ```
 2. Install dependencies
    ```
@@ -37,3 +41,67 @@ chmod +x quickstart.sh && ./quickstart.sh
 2. Count the number of times the line intersects state boundaries
 3. A point is inside the state if either of intersection is odd or point lies on the edge of state. If none of the conditions is true, then 
    point lies outside.
+
+
+
+## Endpoints
+
+
+| Name | Path | Description |
+| - | - | - |
+| Locator | [/locate](#locate) | Locates the coordinate provided |
+| React UI | / | A react Front-End to interact with the node server |
+
+
+---
+###### /locate
+
+|Parameter | type | Description|
+| - | - | - |
+| latitude | Float | **Required**. In geocoordinate format |
+| longitude | Float | **Required**. In geocoordinate format |
+
+
+## Examples
+
+1. 
+Request:
+```
+http://localhost:9191/locate?longitude=-77.036133&latitude=40.513799
+```
+
+Response:
+```json
+    {
+        "state":"Pennsylvania"
+    }
+```
+
+2. 
+Request:
+```
+http://localhost:9191/locate?longitude=abc&latitude=baca
+```
+
+Response:
+```json
+    {
+        "error":true,
+        "Message":"Provide coordinates in digits"
+    }
+    
+```
+
+3. 
+Request:
+```
+http://localhost:9191/locate?
+```
+
+Response:
+```json
+    {
+        "error":true,
+        "Message":"Please provide latitude and longitude"
+    }
+    
