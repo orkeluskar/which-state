@@ -8,7 +8,7 @@ A server which finds if a specified point, if any, is in provides list of geo bo
 
 To get started quickly, assuming you have node & git installed on your machine
 ```bash
-git clone https://github.com/orkeluskar/which-state.git && npm install && npm run start
+git clone https://github.com/orkeluskar/which-state.git && chmod +x quickstart.sh && ./quickstart.sh
 ```
 
 **OR, follow these steps**
@@ -16,6 +16,10 @@ git clone https://github.com/orkeluskar/which-state.git && npm install && npm ru
 1. Clone the repo
    ```
    git clone https://github.com/orkeluskar/which-state.git
+   ```
+2. Change directory
+   ```
+   cd which-state
    ```
 2. Install dependencies
    ```
